@@ -1,0 +1,8 @@
+---
+tasks:
+- name: ensure ssh service is running at boot
+  service:
+    name: "{{ ssh_service_name }}"
+    enabled: yes
+    state: started
+  become: yes
